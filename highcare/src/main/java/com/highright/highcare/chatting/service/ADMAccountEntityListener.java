@@ -1,6 +1,6 @@
 package com.highright.highcare.chatting.service;
 
-import com.highright.highcare.auth.entity.ADMAccount;
+import com.highright.highcare.auth.entity.AUTHAccount;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.PostUpdate;
@@ -11,7 +11,7 @@ public class ADMAccountEntityListener {
 
     // 엔티티 업데이트 될 때마다 데이터 동기화
     @PostUpdate
-    public void onPostUpdate(ADMAccount account) {
+    public void onPostUpdate(AUTHAccount account) throws Exception {
 
         userService.syncUsersFromDatabase();
     }

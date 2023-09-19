@@ -18,7 +18,4 @@ public class RequestMemberDTO {
     private String email;
 
 
-
-
-
 }

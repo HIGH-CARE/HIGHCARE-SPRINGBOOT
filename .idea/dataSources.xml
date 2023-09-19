@@ -9,7 +9,7 @@
       <jdbc-url>jdbc:oracle:thin:@oracle.coffit.today:1521:XE</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="0@localhost" uuid="e627c3c3-2ba9-4999-869d-ce02918e1130">
+    <data-source source="LOCAL" name="0@localhost" uuid="87bf3708-c8ac-4a5b-ac41-68634c6f8e80">
       <driver-ref>redis</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>jdbc.RedisDriver</jdbc-driver>

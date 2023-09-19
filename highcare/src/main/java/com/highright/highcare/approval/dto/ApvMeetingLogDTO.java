@@ -17,7 +17,8 @@ public class ApvMeetingLogDTO {
     private Date meetingDate;
     private String location;
     private String participants;
-
     private Long apvNo;
+
+//    private ApvFormDTO apvFormDTO;
 
 }

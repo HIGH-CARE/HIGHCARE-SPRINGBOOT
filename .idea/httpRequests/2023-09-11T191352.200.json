@@ -1,0 +1,16 @@
+{
+  "status": 200,
+  "message": "근태 조회 성공",
+  "data": [
+    {
+      "manNo": 270,
+      "manTime": "2023-09-10",
+      "status": "퇴근",
+      "empNo": 10001,
+      "workDate": null,
+      "tworkDate": null,
+      "etime": "00:10:49",
+      "stime": "00:05:40"
+    }
+  ]
+}

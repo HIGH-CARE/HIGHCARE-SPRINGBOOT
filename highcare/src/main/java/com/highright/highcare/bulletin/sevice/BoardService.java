@@ -48,7 +48,12 @@ public class BoardService {
         this.commentRepository = commentRepository;
         this.bulletinEmployeeRepository = bulletinEmployeeRepository;
     }
-
+    public Object selectNotice() {
+        BulletinCategories bulletinCategories = boardCategoryRepository.findByCategoryCode(4);
+        List<Board> board = boardRepository.findTop5ByDeleteYnAndBulletinCategoriesOrderByModifiedDateDesc('N',bulletinCategories);
+        return board.stream()
+                .map(board1 -> modelMapper.map(board1, BoardDTO.class)).collect(Collectors.toList());
+    }
     public List<BoardDTO> selectBoardList(){
         List<Board> boardList = boardRepository.findAll();
         return  boardList.stream()
@@ -79,7 +84,7 @@ public class BoardService {
     public int selectCommentTotal(String bulletinCode) {
 
         Board board = boardRepository.findById(Integer.valueOf(bulletinCode)).get();
-        List<Comment> comments = commentRepository.findByBoard(board);
+        List<Comment> comments = commentRepository.findByBoardAndDeleteYn(board,'N');
         return comments.size();
     }
     public int selectSearchTotal(int boardCategoryCode, String content,int empNo) {
@@ -183,10 +188,7 @@ public class BoardService {
         Board board = boardRepository.findById(code).get();
         board.setViews(board.getViews()+1);
         BoardDTO boardDTO = modelMapper.map(board, BoardDTO.class);
-
-        List<Comment> comment = commentRepository.findByBoard(board);
-        List<CommentDTO> commentList = comment.stream().map(comment1 -> modelMapper.map(comment1, CommentDTO.class)).collect(Collectors.toList());
-        boardDTO.setCommentCnt(commentList.size());
+        boardDTO.setEmpName(boardDTO.getBulletinEmployee().getEmpName());
         return boardDTO;
     }
     @Transactional
@@ -209,7 +211,7 @@ public class BoardService {
         Board board = modelMapper.map(boardDTO, Board.class);
         boardRepository.save(board);
 
-        return 1;
+        return "글작성 성공";
     }
     @Transactional
     public Object insertComment(BoardDTO boardDTO) {
@@ -262,7 +264,29 @@ public class BoardService {
         return 1;
 
     }
+    @Transactional
+    public Object deleteComment(CommentDTO commentDTO) {
+        java.util.Date utilDate = new java.util.Date();
+        long currentMilliseconds = utilDate.getTime();
+        java.sql.Date sqlDate = new java.sql.Date(currentMilliseconds);
+        Comment comment = commentRepository.findById(commentDTO.getCommentCode()).get();
+        comment.setDeleteYn('Y');
+        comment.setModifiedDate(sqlDate);
 
+        return 1;
+
+    }
+
+    @Transactional
+    public Object updateComment(CommentDTO commentDTO) {
+        java.util.Date utilDate = new java.util.Date();
+        long currentMilliseconds = utilDate.getTime();
+        java.sql.Date sqlDate = new java.sql.Date(currentMilliseconds);
+        Comment comment = commentRepository.findById(commentDTO.getCommentCode()).get();
+        comment.setModifiedDate(sqlDate);
+        comment.setCommentContent(commentDTO.getCommentContent());
+        return 1;
+    }
 
 
 }

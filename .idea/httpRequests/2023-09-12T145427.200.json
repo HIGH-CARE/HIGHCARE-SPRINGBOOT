@@ -1,0 +1,106 @@
+{
+  "status": 200,
+  "message": "근태 조회 성공",
+  "data": [
+    {
+      "empNo": 10003,
+      "useAn": 0,
+      "addAn": 0,
+      "totalAn": 0,
+      "annNo": 0,
+      "apvNo": null,
+      "myApvVation": null,
+      "ban": 0
+    },
+    {
+      "empNo": 10003,
+      "useAn": 0,
+      "addAn": 0,
+      "totalAn": 0,
+      "annNo": 0,
+      "apvNo": null,
+      "myApvVation": null,
+      "ban": 0
+    },
+    {
+      "empNo": 10003,
+      "useAn": 0,
+      "addAn": 0,
+      "totalAn": 0,
+      "annNo": 0,
+      "apvNo": null,
+      "myApvVation": null,
+      "ban": 0
+    },
+    {
+      "empNo": 10003,
+      "useAn": 0,
+      "addAn": 0,
+      "totalAn": 0,
+      "annNo": 0,
+      "apvNo": null,
+      "myApvVation": null,
+      "ban": 0
+    },
+    {
+      "empNo": 10003,
+      "useAn": 0,
+      "addAn": 0,
+      "totalAn": 0,
+      "annNo": 0,
+      "apvNo": null,
+      "myApvVation": null,
+      "ban": 0
+    },
+    {
+      "empNo": 10003,
+      "useAn": 0,
+      "addAn": 0,
+      "totalAn": 0,
+      "annNo": 0,
+      "apvNo": null,
+      "myApvVation": null,
+      "ban": 0
+    },
+    {
+      "empNo": 10003,
+      "useAn": 0,
+      "addAn": 0,
+      "totalAn": 0,
+      "annNo": 0,
+      "apvNo": null,
+      "myApvVation": null,
+      "ban": 0
+    },
+    {
+      "empNo": 10003,
+      "useAn": 0,
+      "addAn": 0,
+      "totalAn": 0,
+      "annNo": 0,
+      "apvNo": null,
+      "myApvVation": null,
+      "ban": 0
+    },
+    {
+      "empNo": 10003,
+      "useAn": 0,
+      "addAn": 0,
+      "totalAn": 0,
+      "annNo": 0,
+      "apvNo": null,
+      "myApvVation": null,
+      "ban": 0
+    },
+    {
+      "empNo": 10003,
+      "useAn": 0,
+      "addAn": 0,
+      "totalAn": 0,
+      "annNo": 0,
+      "apvNo": null,
+      "myApvVation": null,
+      "ban": 0
+    }
+  ]
+}

@@ -27,4 +27,6 @@ public class ReJob {
 
     @Column(name = "UPPER_JOB_NAME")
     private String upperJobName;
+
+
 }

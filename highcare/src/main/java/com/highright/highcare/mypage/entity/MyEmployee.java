@@ -18,20 +18,16 @@ public class MyEmployee {
     @Id
     @Column(name = "EMP_NO")
     private int empNo;
-    @Column(name = "NAME")
+    @Column(name = "EMP_NAME")
     private String name;
     @Column(name = "EMAIL")
     private String email;
     @Column(name = "PHONE")
     private String phone;
     @Column(name = "RESIDENT_NO")
-    private String reNo;    // 주민번호
+    private String reNo;
     @Column(name = "START_DATE")
-    private String sDate;   // 입사일
-//
-//    private String eDate;   // 퇴사일
-//
-//    private String isRes;  // 퇴사여부
+    private String sDate;
 
     @OneToOne
     @JoinColumn(name = "DEPT_CODE")
@@ -43,20 +39,26 @@ public class MyEmployee {
 
     @Column(name = "ADDRESS")
     private String address;
-    //    private String edu;
+
     @Column(name = "TELEPHONE")
-    private String tel;    // 내선전화
+    private String tel;
 
-//    @OneToOne
-//    @JoinColumn(name = "DEPT_CODE", insertable = false, updatable = false)
-//    private Department deptName;
-//
-//    @OneToOne
-//    @JoinColumn(name = "JOB_CODE", insertable = false, updatable = false)
-//    private Job jobName;
+    @OneToOne
+    @JoinColumn(name = "DEPT_CODE", insertable = false, updatable = false)
+    private Department deptName;
+
+    @OneToOne
+    @JoinColumn(name = "JOB_CODE", insertable = false, updatable = false)
+    private Job jobName;
 
 
+    @OneToMany
+    @JoinColumn(name = "EMP_NO", insertable = false, updatable = false)
+    private List<MyManegement> manegementList;
 
+    @OneToMany
+    @JoinColumn(name = "EMP_NO")
+    private List<MyAnnual> myAnnual;
 
 
 

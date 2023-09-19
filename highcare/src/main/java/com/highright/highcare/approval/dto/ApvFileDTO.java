@@ -11,9 +11,10 @@ import java.sql.Date;
 @ToString
 public class ApvFileDTO {
 
-    private String apvNo;
-    private String fileNo;
+    private Long fileNo;
     private String originalFileName;
     private String savedFileName;
+    private String fileUrl;
+    private String apvNo;
 
 }

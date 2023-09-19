@@ -3,17 +3,19 @@ package com.highright.highcare.chatting.storage;
 import lombok.ToString;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 @Service
 @ToString
 public class UserStorage {
     private static UserStorage instance;
-    private Set<String> users;
+    private Map<String, String> userIdToNameMap;
 
     private UserStorage() {
-        users = new HashSet<>();
+        userIdToNameMap = new HashMap<>();
     }
 
     public static synchronized UserStorage getInstance() {
@@ -23,21 +25,24 @@ public class UserStorage {
         return instance;
     }
 
-    public Set<String> getUsers() {
-        return users;
+    public Map<String, String> getUserIdToNameMap() {
+        return userIdToNameMap;
     }
 
     public boolean userExists(String userId) {
-        return users.contains(userId);
+        return userIdToNameMap.containsKey(userId);
     }
 
-    public void addUser(String userId) {
-        users.add(userId);
-        System.out.println("Added user====================> " + userId);
+    public void addUser(String userId, String userName) {
+        userIdToNameMap.put(userId, userName);
+        System.out.println("Added user====================> " + userName);
     }
 
     public void removeUser(String userId) {
-        users.remove(userId);
+        userIdToNameMap.remove(userId);
     }
 
+    public String getUserName(String userId) {
+        return userIdToNameMap.get(userId);
+    }
 }

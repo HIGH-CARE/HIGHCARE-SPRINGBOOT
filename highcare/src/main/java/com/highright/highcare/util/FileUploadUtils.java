@@ -33,5 +33,23 @@ public class FileUploadUtils {
         return replaceFileName;
 
     }
+    public static boolean deleteFile(String uploadDir, String fileName) throws IOException {
+
+        boolean result = false;
+        Path uploadPath = Paths.get(uploadDir);
+
+        if(!Files.exists(uploadPath)) {
+            result = true;
+        }
+        try {
+            Path filePath = uploadPath.resolve(fileName);
+            Files.delete(filePath);
+            result = true;
+        }catch (IOException ex){
+            throw new IOException("Could not delete file:" + fileName, ex);
+        }
+
+        return result;
+    }
 
 }

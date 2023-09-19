@@ -1,0 +1,25 @@
+{
+  "status": 200,
+  "message": "연차 조회 성공",
+  "data": [
+    {
+      "empNo": 10002,
+      "useAn": 1,
+      "addAn": 1,
+      "totalAn": 1,
+      "annNo": 1,
+      "apvNo": "783",
+      "myApvVation": {
+        "itemNo": "182",
+        "apvNo": "783",
+        "type": "연차",
+        "sdate": "2023-09-03",
+        "edate": "2023-09-04",
+        "comment": "연차사용",
+        "off1": null,
+        "off2": null
+      },
+      "ban": 1
+    }
+  ]
+}

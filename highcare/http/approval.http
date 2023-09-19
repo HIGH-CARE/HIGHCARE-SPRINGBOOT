@@ -108,13 +108,47 @@ GET http://localhost:8080/api/approval/write/999999?인사
 Accept: */*
 
 ### 테스트 조회
-GET http://localhost:8080/api/approval/search/exp4?title=출장신청서&empNo=1
+GET http://highcare.coffit.today:8080/api/approval/search/exp4?title=출장신청서&empNo=1
 Accept: */*
 
-####
 
-POST http://localhost:8080/api/approval/insert/biz1
+
+
+### 연차 상신
+
+POST http://localhost:8080/api/approval/insert/hrm1
 Content-Type: application/json
 Accept: */*
 Access-Control-Allow-Origin: *
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExIiwiYXV0aCI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImV4cCI6MTY5MzE5OTIwMX0.BBJ8vspeBtStoAbuBxRxWWXGXQa0_S9V3SLO7kwIWOsh3QKpxsFTHs6V0gYH0wjTtgwZb-zT0kKq_29MnUQAoQ
+
+{
+  "apvNo": "",
+  "title": "연차신청서",
+  "writeDate": "2023-08-18",
+  "apvStatus": "결재진행중",
+  "isUrgency": "F",
+  "category": "인사",
+  "empNo": 10001,
+  "apvLines": [
+    {
+      "apvLineNo": "",
+      "degree": 0,
+      "isApproval": "T",
+      "apvDate": "2023-09-03",
+      "apvNo": "",
+      "empNo": 10001
+    }
+  ],
+  "apvVacations": [
+    {
+      "startDate": "2023-08-20",
+      "endDate": "2023-08-20",
+      "type": "연차",
+      "comment": "연차사용",
+      "amount": 1,
+      "offType1": "",
+      "offType2": ""
+    }
+  ]
+}

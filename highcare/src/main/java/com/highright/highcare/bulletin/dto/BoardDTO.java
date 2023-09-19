@@ -45,5 +45,6 @@ public class BoardDTO {
     private List<CommentDTO> commentList;
 
     private int empNo;
+    private String empName;
 
 }

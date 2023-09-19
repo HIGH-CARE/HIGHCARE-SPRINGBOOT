@@ -1,90 +1,521 @@
-POST http://localhost:8080/api/approval/insert
-Content-Type: application/json
+GET http://localhost:8080/api/mypage/profile/10003
 Accept: */*
-Access-Control-Allow-Origin: *
-Content-Length: 217
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzMzMzIiwiYXV0aCI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNjk0NjI0MDMzfQ.UiZcn1KVBilMA2nsIBGKsP2vTelNxJj3dkuqlbIBKVhyIfJYFZFDZxS8ERYrUAXwktx4SMVr8zuYlxv4xKDcGA
+Content-Type: application/json
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-{
-  "apvNo": "0001",
-  "title": "타이틀",
-  "writeDate": "2023-08-18",
-  "apvStatus": "진행중",
-  "isUrgency": "F",
-  "category": "인사",
-  "contents1": "내용1",
-  "contents2": "내용2",
-  "empNo": "0001"
-}
+<> 2023-09-14T084258.403.json
 
 ###
 
-POST http://localhost:8080/api/approval/insert
-Content-Type: application/json
+GET http://localhost:8080/api/mypage/profile/10003
 Accept: */*
-Access-Control-Allow-Origin: *
-Content-Length: 217
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzMzMzIiwiYXV0aCI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNjk0NjI0MDMzfQ.UiZcn1KVBilMA2nsIBGKsP2vTelNxJj3dkuqlbIBKVhyIfJYFZFDZxS8ERYrUAXwktx4SMVr8zuYlxv4xKDcGA
+Content-Type: application/json
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-{
-  "apvNo": "0001",
-  "title": "타이틀",
-  "writeDate": "yyyy-mm-dd",
-  "apvStatus": "진행중",
-  "isUrgency": "F",
-  "category": "인사",
-  "contents1": "내용1",
-  "contents2": "내용2",
-  "empNo": "0001"
-}
+<> 2023-09-14T011044.200.json
 
 ###
 
-POST http://localhost:8080/api/approval/insert
-Content-Type: application/json
+GET http://localhost:8080/api/mypage/profile/10003
 Accept: */*
-Access-Control-Allow-Origin: *
-Content-Length: 217
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzMzMzIiwiYXV0aCI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNjk0NjI0MDMzfQBearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzMzMzIiwiYXV0aCI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNjk0NjI0MDMzfQ.UiZcn1KVBilMA2nsIBGKsP2vTelNxJj3dkuqlbIBKVhyIfJYFZFDZxS8ERYrUAXwktx4SMVr8zuYlxv4xKDcGA
+Content-Type: application/json
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-{
-  "apvNo": "0001",
-  "title": "타이틀",
-  "writeDate": "yyyy-mm-dd",
-  "apvStatus": "진행중",
-  "isUrgency": "F",
-  "category": "인사",
-  "contents1": "내용1",
-  "contents2": "내용2",
-  "empNo": "0001"
-}
+<> 2023-09-14T011025.500.json
 
 ###
 
-POST http://localhost:8080/api/approval/insert
+GET http://localhost:8080/api/mypage/profile/10003
+Accept: */*
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzMzMzIiwiYXV0aCI6WyJST0xFX1VTRVIiXSwiZXhwIjoxNjk0NjI0MDMzfQ
 Content-Type: application/json
-Content-Length: 217
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-14T010947.500.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=2
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-14T010846.403.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10003
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-14T010827.403.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10003
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-14T010817.403.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-14T010801.403.json
+
+###
+
+GET http://localhost:8080/api/mypage/anselect/10003
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExIiwiYXV0aCI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImV4cCI6MTY5MzkxNzg3M30.o0M6V2SrwAYA2SP2tGrPqVqS9eVBROIloaRGN7ZiY-GE7UUxTrR2oNu5LmqzDq-HTYDc-H0GrbVpCBFpP0PISQ
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-13T010154.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/anselect/10002
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExIiwiYXV0aCI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImV4cCI6MTY5MzkxNzg3M30.o0M6V2SrwAYA2SP2tGrPqVqS9eVBROIloaRGN7ZiY-GE7UUxTrR2oNu5LmqzDq-HTYDc-H0GrbVpCBFpP0PISQ
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T201857.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=2
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T201833.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T201806.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T201801.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T200133.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T181607.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10002
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T175229.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10001
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T175221.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T173748.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T173505.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T173453.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10001
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T173010.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T172323.200.json
+
+###
+
+POST http://localhost:8080/api/mypage/insert
+Content-Type: application/json
+Accept: */*
+Access-Control-Allow-Origin: *
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMTExIiwiYXV0aCI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImV4cCI6MTY5MzkxNzg3M30.o0M6V2SrwAYA2SP2tGrPqVqS9eVBROIloaRGN7ZiY-GE7UUxTrR2oNu5LmqzDq-HTYDc-H0GrbVpCBFpP0PISQ
+Content-Length: 94
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "apvNo": "0001",
-  "title": "타이틀",
-  "writeDate": "yyyy-mm-dd",
-  "apvStatus": "진행중",
-  "isUrgency": "F",
-  "category": "인사",
-  "contents1": "내용1",
-  "contents2": "내용2",
-  "empNo": "0001"
+  "code": "1",
+  "orName": "원본",
+  "chName": "체인지네임",
+  "date": "2023-08-22"
 }
+
+<> 2023-09-12T172316.404.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T172227.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T171345.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10003
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T171311.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10001
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T171117.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T170046.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T170004.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T165046.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10002
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T164906.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/2
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T164858.500.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T164516.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T164407.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10112
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T164207.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/101124565
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T163757.500.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10003
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T163743.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/101124564
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T163730.500.json
+
+###
+
+GET http://localhost:8080/api/mypage/profile/10003?offset=2
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T163651.500.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T150035.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T145540.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T145511.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T145506.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T145427.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T144135.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T130444.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T125728.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T124706.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=2
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T124641.200.json
+
+###
+
+GET http://localhost:8080/api/mypage/manselect/10003?offset=1
+Accept: */*
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-09-12T101623.200.json
 
 ###
 

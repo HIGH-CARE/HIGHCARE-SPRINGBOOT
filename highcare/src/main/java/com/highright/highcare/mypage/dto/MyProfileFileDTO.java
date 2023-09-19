@@ -16,4 +16,5 @@ public class MyProfileFileDTO {
     private String name;
     private String chName;
     private Date date;
+    private String profileImgUrl;
 }

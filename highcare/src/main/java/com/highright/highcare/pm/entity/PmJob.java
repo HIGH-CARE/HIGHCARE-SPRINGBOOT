@@ -39,4 +39,10 @@ public class PmJob {
     @OneToMany(mappedBy = "parent")
     private List<PmJob> children = new ArrayList<>();
 
+//    @ManyToOne
+//    @JoinColumn(name = "JOB_CODE", insertable = false, updatable = false  )
+//    private PmEmployee employees;
+
+
+
 }

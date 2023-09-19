@@ -1,0 +1,44 @@
+{
+  "status": 200,
+  "message": "프로필 조회 성공",
+  "data": {
+    "code": 27,
+    "empNo": 10112,
+    "myEmployee": {
+      "empNo": 10112,
+      "name": "테스트중입니다1",
+      "email": "secon223d@masda.com",
+      "phone": "010-1321-4564",
+      "reNo": "1321546-5464578",
+      "dep": {
+        "code": 1,
+        "name": "경영 지원 본부"
+      },
+      "job": {
+        "code": 2,
+        "name": "대리"
+      },
+      "address": "서울시",
+      "tel": "013-2441-6454",
+      "deptName": {
+        "code": 1,
+        "name": "경영 지원 본부"
+      },
+      "jobName": {
+        "code": 2,
+        "name": "대리"
+      },
+      "myAnnual": [],
+      "manegementList": [],
+      "sdate": "2023-08-22 09:00:00"
+    },
+    "myProfileFile": {
+      "photoCode": 27,
+      "code": 27,
+      "name": "basicprofile.jpg",
+      "chName": "basicprofile.png",
+      "date": "2023-09-12",
+      "profileImgUrl": "http://localhost:8080/images/basicprofile.jpg"
+    }
+  }
+}

@@ -1,18 +1,24 @@
 package com.highright.highcare.pm.dto;
 
-import lombok.Getter;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 import java.sql.Timestamp;
+import java.util.List;
 
-@Embeddable
+@NoArgsConstructor
+@AllArgsConstructor
+@Setter
 @Getter
+@ToString
 public class ManagementDTO {
 
-    private String manNo;
-    private Timestamp startTime;
-    private Timestamp endTime;
+    private Long manNo;
+    private String startTime;
+    private String endTime;
     private String manDate;
     private String status;
-    private int empNo;
+    private Integer empNo;
+
+    private PmEmployeeDTO pmEmp;
 }

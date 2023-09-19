@@ -45,6 +45,8 @@ public class ApvBusinessTrip {
     @Column(name = "BT_LOCATION")
     private String location;
 
+    @Column(name = "TRIP_ATTENDEES")
+    private String tripAttendees;
     @Column(name = "APV_NO")
     private Long apvNo;
 }

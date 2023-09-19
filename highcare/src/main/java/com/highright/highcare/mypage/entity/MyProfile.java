@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @SequenceGenerator(
-        name = "PROFILE_SEQ_NO",
+        name = "MYPROFILE_SEQ_NO",
         sequenceName = "PROFILE_SEQ_NO",
         initialValue = 1, allocationSize = 1
 )
@@ -20,6 +20,7 @@ import java.util.List;
 public class MyProfile {
 
     @Id
+    @GeneratedValue(strategy =GenerationType.SEQUENCE, generator = "MYPROFILE_SEQ_NO")
     @Column(name = "PROFILE_CODE")
     private int code;
 
@@ -31,7 +32,7 @@ public class MyProfile {
     private MyEmployee myEmployee;
 
     @OneToOne
-    @JoinColumn(name = "PROFILE_CODE")
+    @JoinColumn(name = "PROFILE_CODE", referencedColumnName = "PROFILE_CODE")
     private MyProfileFile myProfileFile;
 
     @Override
@@ -39,9 +40,14 @@ public class MyProfile {
         return "MyProfile{" +
                 "code=" + code +
                 ", empNo=" + empNo +
-//
+
                 ", myEmployee=" + myEmployee +
                 ", myProfileFile=" + myProfileFile +
                 '}';
+    }
+
+    @Builder
+    public MyProfile(int empNo) {
+        this.empNo = empNo;
     }
 }

@@ -1,5 +1,6 @@
 package com.highright.highcare.config;
 
+import com.highright.highcare.exception.ExceptionHandlerFilter;
 import com.highright.highcare.jwt.JwtFilter;
 import com.highright.highcare.jwt.TokenProvider;
 import lombok.RequiredArgsConstructor;
@@ -11,12 +12,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class JwtSecurityConfig extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {
 
+
     private final TokenProvider tokenProvider;
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
         JwtFilter customFilter = new JwtFilter(tokenProvider);
         http.addFilterBefore(customFilter, UsernamePasswordAuthenticationFilter.class);
+
     }
 
 }

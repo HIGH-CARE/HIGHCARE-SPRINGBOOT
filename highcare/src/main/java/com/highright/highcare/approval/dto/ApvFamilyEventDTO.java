@@ -24,6 +24,7 @@ public class ApvFamilyEventDTO {
     private String sendingAddress;
     private String sendingPhone;
     private String requestsNote;
+    private Long apvNo;
 
-    private ApvFormDTO apvFormDTO;
+//    private ApvFormDTO apvFormDTO;
 }

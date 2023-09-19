@@ -12,7 +12,6 @@ import java.sql.Date;
 
 @Entity
 @Table(name="TBL_EMPLOYEE")
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

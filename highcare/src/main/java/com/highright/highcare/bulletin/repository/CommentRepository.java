@@ -14,4 +14,6 @@ public interface CommentRepository extends JpaRepository<Comment, Integer> {
 
 
     Page<Comment> findByDeleteYnAndBoard(char n, Board board, Pageable paging);
+
+    List<Comment> findByBoardAndDeleteYn(Board board, char n);
 }

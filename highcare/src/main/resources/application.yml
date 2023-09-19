@@ -1,5 +1,6 @@
 server:
   port: 8080
+
 spring:
   datasource:
     driver-class-name: oracle.jdbc.driver.OracleDriver
@@ -9,12 +10,11 @@ spring:
   servlet:
     multipart:
       enabled: true
-      max-file-size: 10MB
-      max-request-size: 10MB
+      max-file-size: 30MB
+      max-request-size: 30MB
   web:
     resources:
       static-locations: classpath:/images/
-      add-mappings: false
   # cookie
   server:
     servlet:
@@ -38,8 +38,7 @@ spring:
   redis:
     host: localhost
     port: 6379
-
-# jpa config
+  # jpa config
   jpa:
     generate-ddl: false
     show-sql: true
@@ -60,14 +59,14 @@ spring:
         registration:
           google:
             client-id: 831001732147-ggsjpv73kps8bchv2s8k85790qm3iv76.apps.googleusercontent.com
-            client-secret: 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
+            client-secret: AIzaSyBvmCsalasbBKbJSqyzcTNYc4GNVzlrf6Q
             scope:
               - email
               - profile
           kakao:
             client-id: 04a820b4a5fce35c8a4255e9e7fc794f
             client-secret: oWbV6kSG5RO5inmHsf8qZf4kfrxsze2C
-            redirect-uri: http://localhost:3000/login/oauth/kakao
+            redirect-uri: http://highcare.coffit.today:3000/login/oauth/kakao
             authorization-grant-type: authorization_code
             client-authentication-method: POST, GET
             client-name: Kakao
@@ -94,9 +93,16 @@ jwt:
     level:
       root: info
 image:
-  add-resource-locations: classpath:/static/images/
+  add-resource-locations: file:////profileImages/
   add-resource-handler: /images/**
 
   image-dir: src/main/resources/static/images
-  image-url: http://localhost:8080/images/
+  image-url: http://highcare.coffit.today:8080/images/
+
+file:
+  add-resource-locations: classpath:/static/apvFiles/
+  add-resource-handler: /apvFiles/**
+
+  upload-dir: src/main/resources/static/apvFiles
+  base-url: http://highcare.coffit.today:8080/apvFiles/
 

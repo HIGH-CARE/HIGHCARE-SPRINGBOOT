@@ -4,6 +4,7 @@ import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.sql.Date;
 import java.util.Collection;
 import java.util.List;
 
@@ -18,10 +19,19 @@ public class LoginMemberDTO implements UserDetails {
     private String Name;
     private String password;
 
+    private String isTempPwd;
+    private Date pwdExpiredDate;
+
     private String deptName;
     private String jobName;
 
     private String loginType;
+
+    private String authNumber;
+
+    private String browser;
+
+    private String device;
 
     private List<AuthAccountDTO> roleList;
 
@@ -64,15 +74,20 @@ public class LoginMemberDTO implements UserDetails {
 
 
     @Builder
-
-    public LoginMemberDTO(int empNo, String id, String name, String password, String deptName, String jobName, String loginType, List<AuthAccountDTO> roleList) {
+    public LoginMemberDTO(int empNo, String id, String name, String password, String isTempPwd, Date pwdExpiredDate, String deptName, String jobName, String loginType, String authNumber, String browser, String device, List<AuthAccountDTO> roleList) {
         this.empNo = empNo;
         this.id = id;
         Name = name;
         this.password = password;
+        this.isTempPwd = isTempPwd;
+        this.pwdExpiredDate = pwdExpiredDate;
         this.deptName = deptName;
         this.jobName = jobName;
         this.loginType = loginType;
+        this.authNumber = authNumber;
+        this.browser = browser;
+        this.device = device;
         this.roleList = roleList;
     }
+
 }

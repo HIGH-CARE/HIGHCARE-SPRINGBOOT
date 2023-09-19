@@ -1,0 +1,80 @@
+{
+  "status": 200,
+  "message": "근태 조회 성공",
+  "data": {
+    "data": [
+      {
+        "empNo": 10003,
+        "useAn": 0,
+        "addAn": 0,
+        "totalAn": 0,
+        "annNo": 0,
+        "apvNo": null,
+        "myApvVation": null,
+        "ban": 0
+      },
+      {
+        "empNo": 10003,
+        "useAn": 0,
+        "addAn": 0,
+        "totalAn": 0,
+        "annNo": 0,
+        "apvNo": null,
+        "myApvVation": null,
+        "ban": 0
+      },
+      {
+        "empNo": 10003,
+        "useAn": 0,
+        "addAn": 0,
+        "totalAn": 0,
+        "annNo": 0,
+        "apvNo": null,
+        "myApvVation": null,
+        "ban": 0
+      },
+      {
+        "empNo": 10003,
+        "useAn": 0,
+        "addAn": 0,
+        "totalAn": 0,
+        "annNo": 0,
+        "apvNo": null,
+        "myApvVation": null,
+        "ban": 0
+      },
+      {
+        "empNo": 10003,
+        "useAn": 0,
+        "addAn": 0,
+        "totalAn": 0,
+        "annNo": 0,
+        "apvNo": null,
+        "myApvVation": null,
+        "ban": 0
+      },
+      {
+        "empNo": 10003,
+        "useAn": 0,
+        "addAn": 0,
+        "totalAn": 0,
+        "annNo": 0,
+        "apvNo": null,
+        "myApvVation": null,
+        "ban": 0
+      }
+    ],
+    "pageInfo": {
+      "pageStart": 1,
+      "pageEnd": 2,
+      "next": false,
+      "prev": false,
+      "total": 16,
+      "cri": {
+        "pageNum": 2,
+        "amount": 10,
+        "searchValue": null
+      }
+    }
+  }
+}

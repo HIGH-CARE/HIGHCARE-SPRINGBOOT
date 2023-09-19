@@ -1,12 +1,14 @@
 package com.highright.highcare.jwt;
 
+import com.highright.highcare.auth.dto.AccountDTO;
 import com.highright.highcare.auth.dto.LoginMemberDTO;
 import com.highright.highcare.auth.dto.TokenDTO;
-import com.highright.highcare.auth.entity.ADMRefreshToken;
+import com.highright.highcare.auth.entity.AUTHRefreshToken;
 import com.highright.highcare.common.AdminCustomBean;
 import com.highright.highcare.exception.TokenException;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
+import io.jsonwebtoken.io.IOException;
 import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,6 +19,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.security.Key;
@@ -32,20 +35,19 @@ public class TokenProvider {
     private final Key key;     // access 토큰 전용 시크릿키
 
 //    @Value("${jwt.expire-time}")
-    public static long ACCESS_TOKEN_EXPIRE_TIME = 3600000*2;   // 0.1시간
+    public static long ACCESS_TOKEN_EXPIRE_TIME = 3600000*4;   // 4시간
 //    @Value("${jwt.refresh-expire-time}")
-    public static long REFRESH_TOKEN_EXPIRE_TIME = 36000000;    // 1시간
+    public static long REFRESH_TOKEN_EXPIRE_TIME = 36000000;    // 10시간
 
 
     private final UserDetailsService userDetailsService;
-    private final AdminCustomBean customBean;
-
+    private final AdminCustomBean adminCustomBean;
     public static final String AUTHORIZATION_HEADER = "Authorization";
     public static final String REFRESHKEY_HEADER = "RefreshToken";
 
-    public TokenProvider(@Value("${jwt.secret}") String secretAccessKey, UserDetailsService userDetailsService, AdminCustomBean customBean) {
+    public TokenProvider(@Value("${jwt.secret}") String secretAccessKey, UserDetailsService userDetailsService, AdminCustomBean adminCustomBean) {
         this.userDetailsService = userDetailsService;
-        this.customBean = customBean;
+        this.adminCustomBean = adminCustomBean;
         byte[] AkeyBytes = Decoders.BASE64.decode(secretAccessKey);
         this.key = Keys.hmacShaKeyFor(AkeyBytes);
 
@@ -83,6 +85,8 @@ public class TokenProvider {
                 .deptName(loginMemberDTO.getDeptName())
                 .jobName(loginMemberDTO.getJobName())
                 .role(loginMemberDTO.getRoleList().toString())
+                .isTempPwd(loginMemberDTO.getIsTempPwd())
+                .accountDTO(AccountDTO.builder().isTempPwd(loginMemberDTO.getIsTempPwd()).pwdExpiredDate(loginMemberDTO.getPwdExpiredDate()).build())
                 .build();
     }
 
@@ -110,7 +114,7 @@ public class TokenProvider {
      * @author hdhye
      * 작성일 2023-08-19
      **/
-    public boolean validateToken(String jwt) {
+    public boolean validateToken(String jwt) throws ServletException, IOException {
         try {
             Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(jwt);
             return true; // 위 코드 정상동작(유효)되면 true 반환됨, 예외발생시 안되면 catch 실행
@@ -128,7 +132,6 @@ public class TokenProvider {
 
     /**
      * TokenProvider 토큰 클레임 추출 메소드
-     *
      * @author hdhye
      * 작성일 2023-08-19
      **/
@@ -171,8 +174,8 @@ public class TokenProvider {
     **/
     public Cookie generateRefreshTokenInCookie(LoginMemberDTO loginMemberDTO){
 
-        // 리프레쉬 토큰 생성 ( "uuid id")
-        String refreshToken = customBean.randomRefreshToken() + loginMemberDTO.getId();
+        // 리프레쉬 토큰 생성 ( "uuid + id")
+        String refreshToken = adminCustomBean.randomRefreshToken() + loginMemberDTO.getId();
         // 쿠키에 헤더와 담는다
         String cookieName = REFRESHKEY_HEADER;
         String cookieValue = refreshToken;
@@ -184,8 +187,7 @@ public class TokenProvider {
         cookie.setHttpOnly(true);             // httponly 옵션 설정
         cookie.setSecure(true);               // https 옵션 설정
         cookie.setPath("/");            // 모든 곳에서 쿠키열람 가능
-//        cookie.setDomain("localhost:3000");
-        cookie.setMaxAge((int) REFRESH_TOKEN_EXPIRE_TIME);         // 쿠키 만료시간 설정 (테스트 10분)
+        cookie.setMaxAge((int) REFRESH_TOKEN_EXPIRE_TIME);         // 쿠키 만료시간 설정
 
         return cookie;
     }
@@ -196,33 +198,41 @@ public class TokenProvider {
      *작성일 2023-08-21
      **/
     // 헤더 쿠키에 있는refresh토큰 resolver
-    public ADMRefreshToken resolveCookie(HttpServletRequest request) {
+    public AUTHRefreshToken resolveCookie(HttpServletRequest request) {
+
+        log.info("[TokenProvider] resolveCookie : request === {}",request);
 
         Cookie[] cookies = request.getCookies();
+
         String refreshToken = "";
         String memberId = "";
 
         if (cookies != null) {
             for (Cookie cookie : cookies) {
                 if (REFRESHKEY_HEADER.equals(cookie.getName())) {
-                    refreshToken = cookie.getValue().split("=")[0];
-                    memberId = cookie.getValue().split("=")[1];
-                    break; // 원하는 쿠키를 찾으면 루프 종료
+                    String[] cookieValues = cookie.getValue().split("=");
+                    if (cookieValues.length >= 2) {
+                        refreshToken = cookieValues[0];
+                        memberId = cookieValues[1];
+                        break; // 원하는 쿠키를 찾으면 루프 종료
+                    }
                 }
             }
         }
         //f04b112a-1c52-4ecf-9a18-b9385192403b=user01
         log.info("[TokenProvider] resolveCookie : refreshToken === {}",refreshToken);
         log.info("[TokenProvider] resolveCookie : memberId === {}",memberId);
-        return ADMRefreshToken.builder()
+        return AUTHRefreshToken.builder()
                 .refreshToken(refreshToken)
                 .id(memberId)
                 .build();
     }
 
     // access 토큰 아이디
-    private String getUserId(String jwt) {
-        return Jwts.parserBuilder()
+    public String getUserId(String jwt) {
+        log.info("[TokenProvider] getUserId : jwt === {}",jwt);
+
+              return Jwts.parserBuilder()
                 .setSigningKey(key).build()
                 .parseClaimsJws(jwt)
                 .getBody()

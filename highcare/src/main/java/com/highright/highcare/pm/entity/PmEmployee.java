@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 
 @Entity
@@ -18,6 +19,10 @@ import java.sql.Date;
 @AllArgsConstructor
 @Getter
 @Setter
+//@NamedEntityGraph(name = "employees-with-related-entities",
+//        attributeNodes = {
+//                @NamedAttributeNode("military")
+//        })
 public class PmEmployee {
     @Id
     @Column(name = "EMP_NO")
@@ -42,7 +47,7 @@ public class PmEmployee {
     @Column(name = "START_DATE")
     private Date startDate;
 
-    @Column(name = "END_DATE")
+    @Column(name = "END_DATE", nullable = true)
     private Date endDate;
 
     @Column(name = "IS_RESIGNATION")
@@ -50,6 +55,9 @@ public class PmEmployee {
 
     @Column(name = "DEPT_CODE")
     private int deptCode;
+
+    @Column(name = "JOB_CODE")
+    private int jobCode;
 
     @Column(name = "ADDRESS")
     private String address;
@@ -60,9 +68,27 @@ public class PmEmployee {
     @Column(name = "TELEPHONE")
     private String telephone;
 
-    @ManyToOne
-    @JoinColumn(name="JOB_CODE")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="JOB_CODE", insertable = false, updatable = false)
     private PmJob job;
+
+    @OneToMany(mappedBy = "employees", fetch = FetchType.LAZY)
+    private List<Military> military;
+
+    @OneToMany(mappedBy = "employees", fetch = FetchType.LAZY)
+    private List<Career> career;
+
+    @OneToMany(mappedBy = "employees", fetch = FetchType.LAZY)
+    private List<Certification> certification;
+
+    @ManyToOne
+    @JoinColumn(name="JOB_CODE", insertable = false, updatable = false )
+    private PmDepartment dt;
+
+    //    @Column(name="JOB_CODE")
+    //    private Integer job;
+
+
 
 
 }

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ddc10e3-6e49-4fe6-994e-110aa52bb408" name="Changes" comment="#10 DB데이터 UserStorage에 add, 상대방 id입력해서 채팅방 생성하기 버튼까지 완료" />
+    <list default="true" id="2ddc10e3-6e49-4fe6-994e-110aa52bb408" name="Changes" comment="dahee merge">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a31f8238-423c-47af-a3bd-49d0373f7f37.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a31f8238-423c-47af-a3bd-49d0373f7f37.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/highcare/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/highcare/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/highcare/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/highcare/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/highcare/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/highcare/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/highcare/src/main/java/com/highright/highcare/chatting/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/highcare/src/main/java/com/highright/highcare/chatting/controller/UsersController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +50,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="dahee" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,7 +68,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dev/finalproject/final-chatting-springboot/HIGHCARE-SPRINGBOOT&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dev/finalproject/final-chatting-springboot/HIGHCARE-SPRINGBOOT/highcare/src/main/java/com/highright/highcare/chatting/pubsub&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -106,17 +114,13 @@
       <updated>1693373139536</updated>
       <workItem from="1693373140744" duration="637000" />
       <workItem from="1693447343602" duration="28786000" />
-      <workItem from="1693554729893" duration="4741000" />
-      <workItem from="1693562781980" duration="868000" />
-      <workItem from="1693572194811" duration="599000" />
-      <workItem from="1693668381808" duration="1021000" />
-      <workItem from="1693819269103" duration="40068000" />
-      <workItem from="1693992580960" duration="1638000" />
-      <workItem from="1693994464903" duration="4482000" />
-      <workItem from="1694003806582" duration="2338000" />
-      <workItem from="1694048919578" duration="3841000" />
-      <workItem from="1694057677811" duration="4111000" />
-      <workItem from="1694134303807" duration="32693000" />
+      <workItem from="1694611983386" duration="1820000" />
+      <workItem from="1694644672384" duration="4015000" />
+      <workItem from="1695012982185" duration="864000" />
+      <workItem from="1695027614695" duration="134000" />
+      <workItem from="1695047946297" duration="615000" />
+      <workItem from="1695049534808" duration="1213000" />
+      <workItem from="1695100768320" duration="10193000" />
     </task>
     <task id="LOCAL-00001" summary="dahee merge">
       <created>1693539950270</created>
@@ -125,14 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1693539950270</updated>
     </task>
-    <task id="LOCAL-00002" summary="local dahee merge">
-      <created>1693540292734</created>
+    <task id="LOCAL-00002" summary="dahee merge">
+      <created>1693988494832</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1693540292734</updated>
+      <updated>1693988494832</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="dahee merge">
+      <created>1694588849785</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694588849785</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,9 +161,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="hr merge" />
     <MESSAGE value="dahee merge" />
-    <MESSAGE value="local dahee merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="local dahee merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="dahee merge" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

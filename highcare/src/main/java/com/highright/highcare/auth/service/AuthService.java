@@ -1,5 +1,6 @@
 package com.highright.highcare.auth.service;
 
+import com.highright.highcare.auth.dto.AccountDTO;
 import com.highright.highcare.auth.dto.LoginMemberDTO;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,4 +16,7 @@ public interface AuthService {
 //    Object insertOauthJwt(Map<String, Object> data, HttpServletResponse response);
 
     Object insertOauthRegist(Map<String, Object> data, HttpServletResponse response);
+
+
+    Object updateAndInsertPassword(AccountDTO accountDTO);
 }

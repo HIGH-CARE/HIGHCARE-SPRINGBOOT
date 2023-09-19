@@ -1,7 +1,7 @@
 package com.highright.highcare.auth.service;
 
 import com.highright.highcare.auth.dto.LoginMemberDTO;
-import com.highright.highcare.auth.entity.ADMAccount;
+import com.highright.highcare.auth.entity.AUTHAccount;
 import com.highright.highcare.auth.repository.AccountRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,7 +30,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String memberId) throws UsernameNotFoundException {
 
-        ADMAccount account = accountRepository.findByMemberId(memberId);
+        AUTHAccount account = accountRepository.findByMemberId(memberId);
         LoginMemberDTO AuthenticMember = modelMapper.map(account, LoginMemberDTO.class);
 
         log.info("[CustomUserDetailsService] loadUserByUsername : AuthenticMember === {}", AuthenticMember);

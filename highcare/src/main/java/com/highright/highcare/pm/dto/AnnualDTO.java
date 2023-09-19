@@ -1,11 +1,17 @@
 package com.highright.highcare.pm.dto;
 
-import lombok.Getter;
 
+import lombok.*;
+
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import java.util.List;
 
-@Embeddable
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
+@Setter
+@ToString
 public class AnnualDTO {
 
     private String apvNo;
@@ -15,4 +21,8 @@ public class AnnualDTO {
     private int addAnnual;
     private int totalAnnual;
     private String reason;
+
+    private List<ApvPmFormDTO> pmForms;
+    private ApvVacationDTO vacation;
+    private List<PmEmployeeDTO> AnEmployee;
 }

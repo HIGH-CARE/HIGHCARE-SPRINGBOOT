@@ -22,7 +22,6 @@ public class MyCalendar {
     private String startTime;
     @Column(name = "END_TIME")
     private String endTime;
-//    private int empNo;
 
     @ManyToOne
     @JoinColumn(name = "EMP_NO")

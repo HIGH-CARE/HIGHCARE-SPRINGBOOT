@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @SequenceGenerator(
-        name = "DEPARTMENT_SEQ_NO",
+        name = "MYDEPARTMENT_SEQ_NO",
         sequenceName = "DEPARTMENT_SEQ_NO",
         initialValue = 1, allocationSize = 1
 )
@@ -19,16 +19,11 @@ import javax.persistence.*;
 public class Department {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MYDEPARTMENT_SEQ_NO")
     @Column(name = "DEPT_CODE")
     private int code;
 
     @Column(name = "NAME")
     private String name;
 
-//    @Override
-//    public String toString() {
-//        return "Department{" +
-//                "name='" + name + '\'' +
-//                '}';
-//    }
 }

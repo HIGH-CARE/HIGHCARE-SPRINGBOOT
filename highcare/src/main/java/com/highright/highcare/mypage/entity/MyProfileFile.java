@@ -12,8 +12,8 @@ import java.sql.Date;
 @Getter
 @Setter
 @SequenceGenerator(
-        name = "MYFILE_SEQ_NO",       // 엔티티 안에서 저장되는 이름
-        sequenceName = "FILE_SEQ_NO",       // DB에 저장되는 이름
+        name = "MYFILE_SEQ_NO",
+        sequenceName = "FILE_SEQ_NO",
         initialValue = 1, allocationSize = 1
 )
 @NoArgsConstructor
@@ -35,9 +35,19 @@ public class MyProfileFile {
     @Column(name = "CHANGED_FILE_NAME")
     private String chName;
 
+    @Column(name="PROFILE_IMAGE_URL")
+    private String profileImgUrl;
+
     @Column(name = "CREATION_DATE" ,nullable = true)
     private Date date;
 
 
-
+    @Builder
+    public MyProfileFile(int code, String name, String chName, String profileImgUrl, Date date) {
+        this.code = code;
+        this.name = name;
+        this.chName = chName;
+        this.profileImgUrl = profileImgUrl;
+        this.date = date;
+    }
 }

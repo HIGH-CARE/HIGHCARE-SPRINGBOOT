@@ -20,4 +20,5 @@ public class MessageModel {
     private int clubId;
     private String clubName;
     private Date timestamp;
+
 }

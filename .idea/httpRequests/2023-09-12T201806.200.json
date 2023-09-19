@@ -1,0 +1,120 @@
+{
+  "status": 200,
+  "message": "근태 조회 성공",
+  "data": {
+    "data": [
+      {
+        "manNo": 294,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:12:02",
+        "etime": "00:10:49"
+      },
+      {
+        "manNo": 293,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:05:40",
+        "etime": "00:10:49"
+      },
+      {
+        "manNo": 292,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:12:02",
+        "etime": "00:22:12"
+      },
+      {
+        "manNo": 291,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:05:40",
+        "etime": "00:10:49"
+      },
+      {
+        "manNo": 290,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:12:02",
+        "etime": "00:22:12"
+      },
+      {
+        "manNo": 289,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:05:40",
+        "etime": "00:10:49"
+      },
+      {
+        "manNo": 288,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:12:02",
+        "etime": "00:22:12"
+      },
+      {
+        "manNo": 287,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:05:40",
+        "etime": "00:10:49"
+      },
+      {
+        "manNo": 286,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:12:02",
+        "etime": "00:22:12"
+      },
+      {
+        "manNo": 285,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:05:40",
+        "etime": "00:10:49"
+      }
+    ],
+    "pageInfo": {
+      "pageStart": 1,
+      "pageEnd": 2,
+      "next": false,
+      "prev": false,
+      "total": 16,
+      "cri": {
+        "pageNum": 1,
+        "amount": 10,
+        "searchValue": null
+      }
+    }
+  }
+}

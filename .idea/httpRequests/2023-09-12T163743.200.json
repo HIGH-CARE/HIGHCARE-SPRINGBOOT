@@ -1,0 +1,206 @@
+{
+  "status": 200,
+  "message": "프로필 조회 성공",
+  "data": {
+    "code": 3,
+    "empNo": 10003,
+    "imgUrl": null,
+    "myEmployee": {
+      "empNo": 10003,
+      "name": "가을",
+      "email": "spring0820@gmail.com",
+      "phone": "010-1234-5678",
+      "reNo": "123456-7891011",
+      "dep": {
+        "code": 7,
+        "name": "보험 1팀"
+      },
+      "job": {
+        "code": 5,
+        "name": "부장"
+      },
+      "address": "서울시종로구",
+      "tel": "010-1234-5678",
+      "deptName": {
+        "code": 7,
+        "name": "보험 1팀"
+      },
+      "jobName": {
+        "code": 5,
+        "name": "부장"
+      },
+      "myAnnual": [],
+      "manegementList": [
+        {
+          "manNo": 277,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:22:12",
+          "tworkDate": null,
+          "stime": "00:12:02"
+        },
+        {
+          "manNo": 280,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:22:12",
+          "tworkDate": null,
+          "stime": "00:12:02"
+        },
+        {
+          "manNo": 281,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:10:49",
+          "tworkDate": null,
+          "stime": "00:05:40"
+        },
+        {
+          "manNo": 282,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:22:12",
+          "tworkDate": null,
+          "stime": "00:12:02"
+        },
+        {
+          "manNo": 283,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:10:49",
+          "tworkDate": null,
+          "stime": "00:05:40"
+        },
+        {
+          "manNo": 284,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:22:12",
+          "tworkDate": null,
+          "stime": "00:12:02"
+        },
+        {
+          "manNo": 285,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:10:49",
+          "tworkDate": null,
+          "stime": "00:05:40"
+        },
+        {
+          "manNo": 286,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:22:12",
+          "tworkDate": null,
+          "stime": "00:12:02"
+        },
+        {
+          "manNo": 287,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:10:49",
+          "tworkDate": null,
+          "stime": "00:05:40"
+        },
+        {
+          "manNo": 288,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:22:12",
+          "tworkDate": null,
+          "stime": "00:12:02"
+        },
+        {
+          "manNo": 289,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:10:49",
+          "tworkDate": null,
+          "stime": "00:05:40"
+        },
+        {
+          "manNo": 290,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:22:12",
+          "tworkDate": null,
+          "stime": "00:12:02"
+        },
+        {
+          "manNo": 291,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:10:49",
+          "tworkDate": null,
+          "stime": "00:05:40"
+        },
+        {
+          "manNo": 292,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:22:12",
+          "tworkDate": null,
+          "stime": "00:12:02"
+        },
+        {
+          "manNo": 293,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:10:49",
+          "tworkDate": null,
+          "stime": "00:05:40"
+        },
+        {
+          "manNo": 294,
+          "manTime": "2023-09-10",
+          "status": "퇴근",
+          "empNo": 10003,
+          "workDate": null,
+          "etime": "00:10:49",
+          "tworkDate": null,
+          "stime": "00:12:02"
+        }
+      ],
+      "sdate": "2023-08-23 15:50:43"
+    },
+    "myProfileFile": {
+      "photoCode": 3,
+      "code": 3,
+      "name": "가을.jpg",
+      "chName": "7ead8638c63d4fa1a679d900eed626be.jpg",
+      "date": "2023-09-05",
+      "profileImgUrl": "http://localhost:8080/images/7ead8638c63d4fa1a679d900eed626be.jpg"
+    }
+  }
+}

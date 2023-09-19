@@ -24,7 +24,6 @@ public class MyWorklog {
     private Date sDate;
     @Column(name = "END_DATE")
     private Date eDate;
-//    private int empNo;
 
     @ManyToOne
     @JoinColumn(name="EMP_NO")

@@ -17,6 +17,7 @@ public class ApvIssuanceDTO {
     private String submission;
     private String uses;
     private String requests;
+    private Long apvNo;
 
-    private ApvFormDTO apvFormDTO;
+//    private ApvFormDTO apvFormDTO;
 }

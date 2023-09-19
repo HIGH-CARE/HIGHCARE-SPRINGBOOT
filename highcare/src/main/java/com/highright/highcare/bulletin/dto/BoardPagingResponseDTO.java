@@ -13,5 +13,6 @@ public class BoardPagingResponseDTO {
     private Object data;
     private Object detail;
     private PageDTO pageInfo;
+    private int total;
 
 }

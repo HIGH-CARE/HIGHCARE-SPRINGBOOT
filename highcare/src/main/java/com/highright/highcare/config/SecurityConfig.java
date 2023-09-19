@@ -1,9 +1,9 @@
 package com.highright.highcare.config;
 
 import com.highright.highcare.auth.service.CustomUserDetailsService;
-import com.highright.highcare.jwt.JwtAccessDeniedHandler;
-import com.highright.highcare.jwt.JwtAuthenticationEntryPoint;
-import com.highright.highcare.jwt.TokenProvider;
+//import com.highright.highcare.exception.ExceptionHandlerFilter;
+import com.highright.highcare.exception.ExceptionHandlerFilter;
+import com.highright.highcare.jwt.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -13,7 +13,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -29,11 +31,15 @@ public class SecurityConfig {
     private final TokenProvider tokenProvider;
     private final JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint; // 403 code
     private final JwtAccessDeniedHandler jwtAccessDeniedHandler;            // 401 code
+    private final ExceptionHandlerFilter exceptionHandlerFilter;
+    private final SpecificUrlFilter specificUrlFilter;
+//    private final JwtFilter jwtFilter;
 
 
     private final CustomUserDetailsService customUserDetailsService;
 
-    public static String hostname = "localhost:3000";
+    public static String hostname = "highcare.coffit.today:3000";
+//public static String hostname = "http://localhost:3000";
 
     // 시큐리티 설정무시 정적 리소스 빈 등록
     @Bean
@@ -43,7 +49,7 @@ public class SecurityConfig {
     }
 
     @Bean
-    public BCryptPasswordEncoder passwordEncoder() {
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
@@ -60,12 +66,12 @@ public class SecurityConfig {
                 .authorizeRequests()
                 .antMatchers("/").authenticated()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-//                .antMatchers("/api/auth/login").permitAll()
-////                .antMatchers("/api/admin/**").hasRole("ADMIN")    // 관리자 - 시스템운영담당자만 접근 가능
-//                .antMatchers("/api/**").hasAnyRole("USER", "MANAGER", "ADMIN") //일반 회원 이상 접근 가능
-//                .antMatchers("/api/auth/**").permitAll()
-//                .antMatchers("/api/**").hasRole("MANAGER")   // 매니저- 각 부서 부장급 접근 가능
-                .anyRequest().permitAll()   // 테스트 후 삭제
+                .antMatchers("/api/auth/**").permitAll()
+                .antMatchers("/api/oauth/**").permitAll()
+                .antMatchers("/bulletin/notice").permitAll()
+                .antMatchers("/bulletin/board?categoryCode=4").permitAll()
+                .antMatchers("/api/admin/**").hasRole("ADMIN")    // 관리자 - 시스템운영담당자만 접근 가능
+                .antMatchers("/api/**").hasAnyRole("USER", "MANAGER", "ADMIN") //일반 회원 이상 접근 가능
             .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -75,7 +81,7 @@ public class SecurityConfig {
                 .logout().logoutSuccessUrl("/")
                 .and().apply(new JwtSecurityConfig(tokenProvider))
                 ;
-                // oauth2 추가하기
+
         return http.build();
     }
 
@@ -84,14 +90,32 @@ public class SecurityConfig {
     CorsConfigurationSource corsConfigurationSource(){
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(Arrays.asList("http://localhost:8080", "https://kauth.kakao.com",
+        // 허용할 출처(origin) 목록
+        config.setAllowedOrigins(Arrays.asList(
+                "http://highcare.coffit.today:8080",
+                "https://kauth.kakao.com",
                 "https://kapi.kakao.com",
-                "http://" + hostname));
-        config.setAllowedMethods(Arrays.asList("GET", "PUT", "POST","OPTIONS", "DELETE"));
-        config.setAllowedHeaders(Arrays.asList("Access-Control-Allow-Origin", "Content-type"
-                , "Access-Control-Allow-Headers", "Authorization", "Access-Control-Allow-Credentials"
-                , "X-Requested-With", " application/json"));
+                "http://highcare.coffit.today:3000",
+                "https://highcare.coffit.today:3000"
+        ));
+
+        // 허용할 HTTP 메서드 목록
+        config.setAllowedMethods(Arrays.asList("GET", "PUT", "POST", "OPTIONS", "DELETE"));
+
+        // 허용할 HTTP 헤더 목록
+        config.setAllowedHeaders(Arrays.asList(
+                "Authorization",
+                "Content-Type",
+                "Access-Control-Allow-Origin",
+                "Access-Control-Allow-Credentials",
+                "X-Requested-With",
+                "application/json",
+                "RefreshToken"
+        ));
+
+        // 자격 증명 포함 설정
         config.setAllowCredentials(true);
+
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
 

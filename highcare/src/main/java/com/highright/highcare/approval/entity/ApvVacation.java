@@ -1,6 +1,7 @@
 package com.highright.highcare.approval.entity;
 
 import lombok.*;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @ToString
+@DynamicInsert
 @SequenceGenerator(
         name = "APV_SEQ_ITEMS07",
         sequenceName = "SEQ_APV_VA_ITEMS",
@@ -40,7 +42,7 @@ public class ApvVacation {
     private String comment;
 
     @Column(name = "AMOUNT")
-    private Long amount;
+    private Double amount;
 
     @Column(name = "OFFTYPE1")
     private String offType1;

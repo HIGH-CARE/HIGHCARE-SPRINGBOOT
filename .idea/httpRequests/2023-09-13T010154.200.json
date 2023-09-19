@@ -1,0 +1,210 @@
+{
+  "status": 200,
+  "message": "연차 조회 성공",
+  "data": {
+    "data": [
+      {
+        "empNo": 10003,
+        "useAn": 1,
+        "addAn": 1,
+        "totalAn": 1,
+        "annNo": 12,
+        "apvNo": "826",
+        "myApvVation": {
+          "itemNo": "213",
+          "apvNo": "826",
+          "type": "연차",
+          "sdate": "2023-10-30",
+          "edate": "2023-10-31",
+          "comment": "연차사용",
+          "off1": null,
+          "off2": null
+        },
+        "ban": 1
+      },
+      {
+        "empNo": 10003,
+        "useAn": 1,
+        "addAn": 1,
+        "totalAn": 1,
+        "annNo": 11,
+        "apvNo": "825",
+        "myApvVation": {
+          "itemNo": "212",
+          "apvNo": "825",
+          "type": "연차",
+          "sdate": "2023-10-09",
+          "edate": "2023-10-11",
+          "comment": "연차사용",
+          "off1": null,
+          "off2": null
+        },
+        "ban": 1
+      },
+      {
+        "empNo": 10003,
+        "useAn": 1,
+        "addAn": 1,
+        "totalAn": 1,
+        "annNo": 10,
+        "apvNo": "824",
+        "myApvVation": {
+          "itemNo": "211",
+          "apvNo": "824",
+          "type": "연차",
+          "sdate": "2023-10-02",
+          "edate": "2023-10-03",
+          "comment": "연차사용",
+          "off1": null,
+          "off2": null
+        },
+        "ban": 1
+      },
+      {
+        "empNo": 10003,
+        "useAn": 1,
+        "addAn": 1,
+        "totalAn": 1,
+        "annNo": 13,
+        "apvNo": "823",
+        "myApvVation": {
+          "itemNo": "210",
+          "apvNo": "823",
+          "type": "연차",
+          "sdate": "2023-09-29",
+          "edate": "2023-09-30",
+          "comment": "연차사용",
+          "off1": null,
+          "off2": null
+        },
+        "ban": 1
+      },
+      {
+        "empNo": 10003,
+        "useAn": 1,
+        "addAn": 1,
+        "totalAn": 1,
+        "annNo": 9,
+        "apvNo": "822",
+        "myApvVation": {
+          "itemNo": "209",
+          "apvNo": "822",
+          "type": "연차",
+          "sdate": "2023-09-27",
+          "edate": "2023-09-28",
+          "comment": "연차사용",
+          "off1": null,
+          "off2": null
+        },
+        "ban": 1
+      },
+      {
+        "empNo": 10003,
+        "useAn": 2,
+        "addAn": 2,
+        "totalAn": 2,
+        "annNo": 4,
+        "apvNo": "819",
+        "myApvVation": {
+          "itemNo": "206",
+          "apvNo": "819",
+          "type": "연차",
+          "sdate": "2023-09-03",
+          "edate": "2023-09-04",
+          "comment": "연차사용",
+          "off1": null,
+          "off2": null
+        },
+        "ban": 2
+      },
+      {
+        "empNo": 10003,
+        "useAn": 2,
+        "addAn": 2,
+        "totalAn": 2,
+        "annNo": 3,
+        "apvNo": "818",
+        "myApvVation": {
+          "itemNo": "205",
+          "apvNo": "818",
+          "type": "연차",
+          "sdate": "2023-09-01",
+          "edate": "2023-09-02",
+          "comment": "연차사용",
+          "off1": null,
+          "off2": null
+        },
+        "ban": 2
+      },
+      {
+        "empNo": 10003,
+        "useAn": 2,
+        "addAn": 2,
+        "totalAn": 2,
+        "annNo": 6,
+        "apvNo": "812",
+        "myApvVation": {
+          "itemNo": "204",
+          "apvNo": "812",
+          "type": "포상휴가",
+          "sdate": "2023-09-15",
+          "edate": "2023-09-18",
+          "comment": "국제대회 수상 포상 휴가???",
+          "off1": null,
+          "off2": null
+        },
+        "ban": 2
+      },
+      {
+        "empNo": 10003,
+        "useAn": 1,
+        "addAn": 1,
+        "totalAn": 1,
+        "annNo": 5,
+        "apvNo": "811",
+        "myApvVation": {
+          "itemNo": "202",
+          "apvNo": "811",
+          "type": "연차",
+          "sdate": "2023-09-13",
+          "edate": "2023-09-13",
+          "comment": "연차사용",
+          "off1": null,
+          "off2": null
+        },
+        "ban": 1
+      },
+      {
+        "empNo": 10003,
+        "useAn": 2,
+        "addAn": 2,
+        "totalAn": 2,
+        "annNo": 8,
+        "apvNo": "785",
+        "myApvVation": {
+          "itemNo": "184",
+          "apvNo": "785",
+          "type": "연차",
+          "sdate": "2023-09-08",
+          "edate": "2023-09-09",
+          "comment": "연차사용",
+          "off1": null,
+          "off2": null
+        },
+        "ban": 2
+      }
+    ],
+    "pageInfo": {
+      "pageStart": 1,
+      "pageEnd": 2,
+      "next": false,
+      "prev": false,
+      "total": 11,
+      "cri": {
+        "pageNum": 1,
+        "amount": 10,
+        "searchValue": null
+      }
+    }
+  }
+}

@@ -34,10 +34,6 @@ public class MyBscd {
     @Column(name = "CONTENT")
     private String content;
 
-//    @Column(name = "EMP_NO")
-//    private int empNo;
-
-    // 하나의 회원이 명함 여러개를 가질 수 있다.
     @ManyToOne
     @JoinColumn(name = "EMP_NO")
     private MyEmployee myEmp;

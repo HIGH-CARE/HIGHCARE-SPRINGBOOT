@@ -1,5 +1,5 @@
 ### 사원 전체 조회
-GET http://localhost:8080/api/pm/all?offset=1
+GET http://highcare.coffit.today:8080/api/pm/all?offset=1
 Content-Type: application/json
 Accept: */*
 
@@ -14,23 +14,45 @@ Accept: */*
 }
 
 ### 사원 등록
-POST http://localhost:8080/api/pm/all
+POST http://localhost:8080/api/pm/member/all
 Content-Type: application/json; boundary=WebAppBoundary
 Accept: */*
 
 {
-  "empName" : "사계절",
-  "empEmail" : "aa@masda.com",
-  "phone" : "010-1321-4564",
-  "residentNo" : "1321546-5464578",
-  "startDate" : "2023-08-22",
-  "endDate" : null,
-  "isResignation" : "N",
-  "deptCode" : 1,
-  "jobCode" : 2,
-  "address" : "서울시",
-  "education" : "종로대학교",
-  "telephone" : "013-2441-6454"
+  "empName": "최종테스트",
+  "empEmail": "secon223d@masda.com",
+  "phone": "010-1321-4564",
+  "residentNo": "1321546-5464578",
+  "startDate": "2023-08-22",
+  "endDate": null,
+  "isResignation": "N",
+  "deptCode": 1,
+  "jobCode": 2,
+  "address": "서울시",
+  "education": "종로대학교",
+  "telephone": "013-2441-6454",
+  "military": [
+    {
+      "status": "면제"
+    }
+  ],
+  "certification": [
+    {
+      "name": "SQL박사",
+      "startDate": "2023-09-06",
+      "endDate": "2025-09-06",
+      "institution": "국가공인자격증"
+    }
+  ],
+  "career": [
+    {
+      "name": "2하이",
+      "history": 2,
+      "startDate": "2023-09-06",
+      "endDate": "2025-09-06",
+      "job": "대리"
+    }
+  ]
 }
 
 
@@ -63,6 +85,86 @@ Accept: */*
 Access-Control-Allow-Origin: *
 
 
+### 출근 등록
+POST http://localhost:8080/api/pm/management/insert
+Content-Type: application/json; boundary=WebAppBoundary
+Accept: */*
+
+{
+  "startTime" : 0,
+  "endTime" : null,
+  "manDate" : 0,
+  "status" : "출근",
+  "workTime" : "0",
+  "totalWorkTime" : "0",
+  "mgEmployee": "10005"
+}
+
+
+### 퇴근 등록
+POST http://localhost:8080/api/pm/management/update
+Content-Type: application/json; boundary=WebAppBoundary
+Accept: */*
+
+{
+  "startTime" : 0,
+  "endTime" : 0,
+  "manDate" : 0,
+  "status" : "퇴근",
+  "workTime" : "0",
+  "totalWorkTime" : "0",
+  "mgEmployee": "0"
+}
+
+
+### 퇴근 조회
+GET http://localhost:8080/api/pm/management/search?empNo=10005
+Content-Type: application/json
+Accept: */*
+
+{
+  "empNo":10005
+}
+
+
+### 퇴근 조회 및 등록
+POST http://localhost:8080/api/pm/management/update
+Content-Type: application/json
+Accept: */*
+
+{
+  "empNo":0
+}
+
+
+### 회원 상세조회
+GET http://localhost:8080/api/pm/member/detail/10001
+Content-Type: application/json
+Accept: */*
+
+
+### 연차 조회
+GET http://localhost:8080/api/pm/annual
+Content-Type: application/json
+Accept: */*
+
+### 개인 연차 조회
+GET http://localhost:8080/api/pm/annual/detail/10001
+Content-Type: application/json
+Accept: */*
+
+
+###  연차 등록
+POST http://localhost:8080/api/pm/addananual?empNo=10001
+Content-Type: application/json
+Accept: */*
+
+### 입사일
+GET http://localhost:8080/api/pm/employee/startDate
+Content-Type: application/json
+Accept: */*
+Access-Control-Allow-Origin: *
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMDAwNjQ1NzgiLCJhdXRoIjpbIlJPTEVfQURNSU4iLCJST0xFX01BTkFHRVIiLCJST0xFX1VTRVIiXSwiZXhwIjoxNjk0NjE4NjMwfQ.q0KE2J7cWDpM93OXSgIjFOY5FRk_kk0ujmDL8YGzGJCorO9daCXSsJVLD6btRpUoS-1yK5DESuxC5BEv6nCoag
 
 
 

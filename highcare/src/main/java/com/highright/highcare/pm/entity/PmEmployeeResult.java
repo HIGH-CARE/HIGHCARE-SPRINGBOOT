@@ -17,5 +17,6 @@ public class PmEmployeeResult {
         this.email = employees.getEmpEmail();
         this.phone = employees.getPhone();
         this.title = employees.getJob().getName();
+//        this.title = employees.getJob().getJobName();
     }
 }

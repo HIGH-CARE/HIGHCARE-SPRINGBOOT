@@ -22,7 +22,7 @@ public class Job {
     @Column(name = "JOB_CODE")
     private int code;
 
-    @Column(name = "NAME")
+    @Column(name = "JOB_NAME")
     private String name;
 
 }

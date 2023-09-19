@@ -19,6 +19,7 @@ public class ApvCorpCardDTO {
     private String account;
     private int amount;
     private String cardComment;
+    private Long apvNo;
 
-    private ApvFormDTO apvFormDTO;
+//    private ApvFormDTO apvFormDTO;
 }

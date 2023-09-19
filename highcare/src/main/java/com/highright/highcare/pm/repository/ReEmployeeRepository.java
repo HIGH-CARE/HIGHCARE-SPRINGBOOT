@@ -7,6 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface ReEmployeeRepository extends JpaRepository<ReEmployee, Integer> {
+    ReEmployee findByEmpNo(int empNo);
+
     List<ReEmployee> findAll();
+
+
 }
 

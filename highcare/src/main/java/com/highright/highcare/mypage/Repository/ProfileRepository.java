@@ -12,5 +12,5 @@ import java.util.List;
 @Repository
 public interface ProfileRepository extends JpaRepository<MyProfile, Integer> {
 
-    MyProfile findByEmpNo(int empNo);
+   List<MyProfile> findByEmpNo(int empNo);
 }

@@ -17,9 +17,10 @@ public class ApvVacationDTO {
     private String endDate;
     private String type;
     private String comment;
-    private Long amount;
+    private Double amount;
     private String offType1;
     private String offType2;
+    private Long apvNo;
 
-    private ApvFormDTO apvFormDTO;
+//    private ApvFormDTO apvFormDTO;
 }

@@ -20,9 +20,14 @@
       <introspection-level>3</introspection-level>
       <load-sources>user_and_system_sources</load-sources>
     </data-source>
-    <data-source name="0@localhost" uuid="e627c3c3-2ba9-4999-869d-ce02918e1130">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="REDIS" exact-version="0" />
-      <schema-mapping />
+    <data-source name="0@localhost" uuid="87bf3708-c8ac-4a5b-ac41-68634c6f8e80">
+      <database-info product="Redis Standalone" version="3.0.504" jdbc-version="4.2" driver-name="Redis JDBC Driver" driver-version="1.4" dbms="REDIS" exact-version="3.0.504" exact-driver-version="1.4" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>

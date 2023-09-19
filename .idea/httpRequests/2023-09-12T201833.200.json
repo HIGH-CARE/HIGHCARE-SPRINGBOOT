@@ -1,0 +1,80 @@
+{
+  "status": 200,
+  "message": "근태 조회 성공",
+  "data": {
+    "data": [
+      {
+        "manNo": 284,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:12:02",
+        "etime": "00:22:12"
+      },
+      {
+        "manNo": 283,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:05:40",
+        "etime": "00:10:49"
+      },
+      {
+        "manNo": 282,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:12:02",
+        "etime": "00:22:12"
+      },
+      {
+        "manNo": 281,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:05:40",
+        "etime": "00:10:49"
+      },
+      {
+        "manNo": 280,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:12:02",
+        "etime": "00:22:12"
+      },
+      {
+        "manNo": 277,
+        "manTime": "2023-09-10",
+        "status": "퇴근",
+        "empNo": 10003,
+        "workDate": null,
+        "tworkDate": null,
+        "stime": "00:12:02",
+        "etime": "00:22:12"
+      }
+    ],
+    "pageInfo": {
+      "pageStart": 1,
+      "pageEnd": 2,
+      "next": false,
+      "prev": false,
+      "total": 16,
+      "cri": {
+        "pageNum": 2,
+        "amount": 10,
+        "searchValue": null
+      }
+    }
+  }
+}

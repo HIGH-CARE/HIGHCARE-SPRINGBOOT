@@ -1,0 +1,65 @@
+{
+  "status": 200,
+  "message": "프로필 조회 성공",
+  "data": {
+    "code": 2,
+    "empNo": 10002,
+    "imgUrl": null,
+    "myEmployee": {
+      "empNo": 10002,
+      "name": "여름",
+      "email": "summer0821@gmail.com",
+      "phone": "010-1452-4578",
+      "reNo": "124785-4567811",
+      "dep": {
+        "code": 6,
+        "name": "인사총무팀"
+      },
+      "job": {
+        "code": 2,
+        "name": "대리"
+      },
+      "address": "서울시종로구",
+      "tel": "010-4256-4567",
+      "deptName": {
+        "code": 6,
+        "name": "인사총무팀"
+      },
+      "jobName": {
+        "code": 2,
+        "name": "대리"
+      },
+      "myAnnual": [
+        {
+          "empNo": 10002,
+          "useAn": 1,
+          "addAn": 1,
+          "totalAn": 1,
+          "annNo": 1,
+          "apvNo": "783",
+          "myApvVation": {
+            "itemNo": "182",
+            "apvNo": "783",
+            "type": "연차",
+            "sdate": "2023-09-03",
+            "edate": "2023-09-04",
+            "comment": "연차사용",
+            "off1": null,
+            "off2": null
+          },
+          "ban": 1
+        }
+      ],
+      "manegementList": [],
+      "sdate": "2023-08-23 15:50:42"
+    },
+    "myProfileFile": {
+      "photoCode": 2,
+      "code": 2,
+      "name": "0e9dd85a6707f529e9634348fd92bb2b.jpg",
+      "chName": "d480de684ef448d49e40a84f0aba276d.jpg",
+      "date": "2023-09-05",
+      "profileImgUrl": "http://localhost:8080/images/d480de684ef448d49e40a84f0aba276d.jpg"
+    }
+  }
+}
